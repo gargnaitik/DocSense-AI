@@ -19,6 +19,10 @@
     <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
   </p>
+
+  <p>
+    <a href="https://docsense-ai-mu.vercel.app/login"><strong>🌐 Live Demo</strong></a>
+  </p>
 </div>
 
 ---
@@ -52,7 +56,7 @@ The **DocSense AI Companion** is a dedicated Chrome Extension that bridges the g
 
 - **⚡ Seamless Ingestion:** Instantly save the current webpage, article, or selected text straight to your DocSense AI backend with a single click.
 - **🔍 Contextual Search:** Highlight any text on any webpage to quickly run a semantic search against your private documents.
-- **🔗 Source Code & Installation:** Check out the dedicated repository here: **[DocSense-Companion on GitHub](https://github.com/Ramkrishna45/DocSense-Companion)**
+- **🔗 Source Code & Installation:** Check out the dedicated repository here: **[DocSense-Companion on GitHub](https://github.com/gargnaitik/DocSense-Companion)**
 
 ---
 
