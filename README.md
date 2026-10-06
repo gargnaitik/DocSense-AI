@@ -21,7 +21,7 @@
   </p>
 
   <p>
-    <a href="https://docsense-ai-mu.vercel.app/login"><strong>🌐 Live Demo</strong></a>
+    <a href="https://doc-sense-ai-three.vercel.app/login"><strong>🌐 Live Demo</strong></a>
   </p>
 </div>
 
