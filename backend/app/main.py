@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
+from sqlalchemy import text
 
-from app.database import init_db
+from app.database import engine, init_db
 from app.services.embedding_service import EmbeddingService
 from app.routers import auth, documents, chat, search, capture, collections
 @asynccontextmanager
@@ -44,3 +46,15 @@ app.include_router(collections.router)
 @app.get("/")
 async def root():
     return {"message": "Knowledge Engine API", "version": "1.0.0"}
+
+
+# Health check — runs a real query so uptime monitors also count as database
+# activity (Supabase pauses free projects after 7 days without any)
+@app.api_route("/health", methods=["GET", "HEAD"])
+async def health():
+    try:
+        async with engine.connect() as conn:
+            await conn.execute(text("SELECT 1"))
+        return {"status": "ok", "database": "up"}
+    except Exception:
+        return JSONResponse(status_code=503, content={"status": "degraded", "database": "down"})
